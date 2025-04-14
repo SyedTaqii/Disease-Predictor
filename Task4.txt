@@ -1,0 +1,17 @@
+
+**Task 4: Critical Analysis**
+
+** Why TF-IDF Might Outperform One-Hot Encoding:
+- **Weighted Features**: TF-IDF highlights discriminative terms by reducing the impact of frequent but unimportant words (like “pain” or “fatigue”).
+- **Dimensionality Handling**: TF-IDF typically results in fewer significant dimensions after transformation compared to sparse one-hot matrices.
+- **Better Feature Scaling**: TF-IDF provides normalized feature values, which can improve distance-based methods like KNN.
+
+** Clinical Relevance:
+- **Clustering Insight**: PCA and SVD visualizations using TF-IDF often show better disease subtype separability, suggesting that semantic weighting aligns more closely with clinical patterns.
+- **Disease Grouping**: Some disease types with similar symptoms or risk factors form clusters, providing insights for medical diagnostics or triage support.
+
+** Limitations of Both Methods:
+- **Single Sample per Class**: With only one example per disease subtype, supervised learning is nearly impossible — no meaningful generalization can occur.
+- **One-Hot Weakness**: Extremely sparse representation leads to poor performance in most classifiers, especially when data is limited.
+- **TF-IDF Interpretability**: While more powerful, TF-IDF obscures the original presence/absence of symptoms, which may be critical in clinical settings.
+- **LOOCV Workaround**: Leave-One-Out Cross-Validation was used due to the dataset limitations, but results are unreliable due to zero redundancy in classes.
